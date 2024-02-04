@@ -1,0 +1,11 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: barberhop
+      POSTGRES_PASSWORD: barberhop
+      POSTGRES_DB: dbbarber
+    ports:
+      - "5432:5432"
