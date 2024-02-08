@@ -2,24 +2,31 @@
 
 import Image from "next/image";
 import { Card, CardContent } from "./ui/card";
-import { MenuIcon } from "lucide-react";
+import { CalendarIcon, HomeIcon, LogInIcon, LogOutIcon, MenuIcon, UserIcon } from "lucide-react";
 import { Button } from "./ui/button";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { Avatar } from "@radix-ui/react-avatar";
+import { AvatarImage } from "./ui/avatar";
+import Link from "next/link";
+import SideMenu from "./side-menu";
 
 const Header = () => {
-    const {data} = useSession();
-    const handleLoginClick = async () => {
-        
-        await signIn();
-    }
+
     return (
         <Card>
             <CardContent className="p-5 flex justify-between items-center flex-row">
                 <Image src="/logo.png" alt="FSW Barber" height={22} width={120} />
-                {/* <Button variant="outline" size="icon" className="h-8 w-8">
-                    <MenuIcon size={18}/>
-                </Button> */}
-                {data?.user ? <div><Button onClick={()=> signOut()}>Sair</Button> <span>{data.user.name}</span></div> : <Button onClick={handleLoginClick}>Login</Button>}
+                <Sheet>
+                    <SheetTrigger asChild>
+                        <Button variant="outline" size="icon" >
+                            <MenuIcon size={18} />
+                        </Button>
+                    </SheetTrigger>
+                    <SheetContent>
+                        <SideMenu />
+                    </SheetContent>
+                </Sheet>
             </CardContent>
         </Card>
 
