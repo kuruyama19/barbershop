@@ -2,6 +2,8 @@
 import { db } from "@/app/_lib/prisma";
 import BarbershopInfo from "./_components/barbershop-info";
 import ServiceItem from "./_components/service-item";
+import { getServerSession } from "next-auth";
+import { authOption } from "@/app/api/auth/[...nextauth]/route";
 
 
 interface BarbershopDetailsPageProps {
@@ -11,6 +13,8 @@ interface BarbershopDetailsPageProps {
 }
 
 const BarbershopDetailsPage = async ({ params }: BarbershopDetailsPageProps) => {
+    const session = await getServerSession(authOption);
+
     if (!params.id) {
         // TODO: redirecionar para home
         return null;
