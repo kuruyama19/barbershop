@@ -1,0 +1,33 @@
+{
+    "workbench.colorTheme": "Aura Dark (Soft Text)",
+    "symbols.hidesExplorerArrows": false,
+    "workbench.iconTheme": "symbols",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.8,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.renderLineHighlight": "gutter",
+    "editor.fontLigatures": true,
+    "workbench.editor.labelFormat": "short",
+    "explorer.compactFolders": false,
+    "editor.semanticHighlighting.enabled": false,
+    "breadcrumbs.enabled": false,
+    // "workbench.activityBar.location": "hidden", //Esconde o explorar
+    "editor.minimap.enabled": false, //Esconde o mini mapa
+    // "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "workbench.statusBar.visible": false, //Esconde a barra inferior
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "liveServer.settings.donotVerifyTags": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "php.validate.enable": false,
+    "php.suggest.basic": false,
+    "editor.accessibilitySupport": "off",
+    "workbench.editor.empty.hint": "hidden",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "window.menuBarVisibility": "compact",
+}
